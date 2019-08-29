@@ -1,0 +1,59 @@
+#!/bin/bash
+# compile varRhoIncompressible class
+cd varRhoIncompressible
+
+wclean
+
+cd ..
+
+#compile varRhoInterIsoFoam
+
+cd varRhoInterIsoFoam
+
+wclean
+
+cd ..
+
+#compile varRhoInterFoam family
+
+#varRhoInterFoam
+cd varRhoInterFoam
+
+wclean
+
+#varRhoInterMixingFoam
+cd varRhoInterMixingFoam
+
+wclean
+
+cd ..
+
+#varRhoOverInterDymFoam
+cd varRhoOverInterDyMFoam
+
+wclean
+
+cd ..
+
+cd ..
+
+#compile varRhoMultiphaseInterFoam family
+
+cd varRhoMultiphaseInterFoam
+
+# multiphaseMixture
+cd multiphaseMixture
+
+wclean
+
+
+cd ..
+
+# varRhoMultiphaseInterFoam
+wclean
+
+
+cd ..
+
+
+

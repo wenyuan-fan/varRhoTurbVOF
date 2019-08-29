@@ -1,0 +1,19 @@
+# file structure
+  * varRhoIncompressilbe: folder for constructing variable-density incompressible turbulence models;
+  * VoF: folder for shared files for various VOF solvers;
+  * varRhoInterFoam: folder for variable-density version of the interFoam family;
+  * varRhoInterIsoFoam: folder for the varRhoInterIsoFoam solver;
+  * varRhoMultiphaseInterFoam: folder for the varRhoMultiphaseInterFoam solver;
+  * bruteForceExamples: folder for three examples of the brute-force approach;
+  * tutorials: folder for tutorials;
+  * compile.sh: file for compilation.
+
+# installation
+The installation of OpenFOAM v1706 is a prerequisite for using the newly designed solvers.
+In order to use the code, one needs to load the environment variable for OpenFOAM v1706 first and then run "./compile.sh" to compile the code.
+
+# using solvers
+As for the usage for a specific solver, e.g. varRhoInterFoam, it is almost the same with the corresponding existing solver interFoam. For instance, it could be executed on 1024 processes by simply typing "mpirun -np 1024 varRhoInterFoam -parallel" in the terminal. Since the full-form turbulence models are used in the new solvers, the corresponding discretization schemes should be provided to solve the governing equations numerically. Other than this, the users could reuse all their interFoam input files for varRhoInterFoam.
+
+# running tutorials
+Several tutorials are provided in the "tutorials" folder, the "Allrun" file is used to run the case with the original solver, and "varRhoAllrun" is used to run the case with the corresponding newly designed solver.

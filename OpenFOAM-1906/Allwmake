@@ -1,0 +1,59 @@
+#!/bin/bash
+# compile varRhoIncompressible class
+cd varRhoIncompressible
+
+wmake
+
+cd ..
+
+#compile varRhoInterIsoFoam
+
+cd varRhoInterIsoFoam
+
+wmake
+
+cd ..
+
+#compile varRhoInterFoam family
+
+#varRhoInterFoam
+cd varRhoInterFoam
+
+wmake
+
+#varRhoInterMixingFoam
+cd varRhoInterMixingFoam
+
+wmake
+
+cd ..
+
+#varRhoOverInterDymFoam
+cd varRhoOverInterDyMFoam
+
+wmake
+
+cd ..
+
+cd ..
+
+#compile varRhoMultiphaseInterFoam family
+
+cd varRhoMultiphaseInterFoam
+
+# multiphaseMixture
+cd multiphaseMixture
+
+wmake
+
+cd ..
+
+# varRhoMultiphaseInterFoam
+
+wmake
+
+
+cd ..
+
+
+
