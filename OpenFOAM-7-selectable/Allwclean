@@ -1,0 +1,26 @@
+#!/bin/bash
+# clean varRhoIncompressible
+cd varRhoIncompressible
+
+wclean
+
+cd ..
+
+# clean selectableIncompressibleTurbulenceModels
+cd selectableIncompressibleTurbulenceModels
+
+wclean
+
+cd ..
+
+
+#clean varRhoInterFoam family
+
+#varRhoInterFoam
+cd varRhoInterFoam
+
+wclean
+
+
+
+

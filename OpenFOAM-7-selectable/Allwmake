@@ -1,0 +1,25 @@
+#!/bin/bash
+# compile varRhoIncompressible
+cd varRhoIncompressible
+
+wmake
+
+cd ..
+
+# compile selectableIncompressibleTurbulenceModels
+cd selectableIncompressibleTurbulenceModels
+
+wmake
+
+cd ..
+
+
+#compile varRhoInterFoam family
+
+#varRhoInterFoam
+cd varRhoInterFoam
+
+wmake
+
+
+
