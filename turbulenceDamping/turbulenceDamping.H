@@ -25,19 +25,24 @@ Class
     Foam::fv::turbulenceDamping
 
 Description
-    Calculates and applies the turbulence damping term to the omega equation.
-    The current implementation is based on the following work:
+    Calculates and applies the interficial turbulence damping term to the
+    omega equation. Therefore, this fvOption can only handle omega-based
+    turbulence models. In addition, this implementation only applies to
+    multiphase flows where the flow is treated as a mixture in turbulence
+    modeling.
+
+    Reference:
     \verbatim
-        Fan, W. & Anglart, H. (2019).
-        Progress in Phenomenological Modeling of Turbulence Damping around a
-        Two-Phase Interface.
-        Fluids, 4(3), 136.
-    \endverbatim
-    where modifications are made to the model proposed by
-    \verbatim
-        Egorov, Y. (2004).
-        Validation of CFD codes with PTS-relevant test cases.
-        5th Euratom Framework Programme ECORA project, pp. 91–116.
+        Original model:
+            Egorov, Y. (2004).
+            Validation of CFD codes with PTS-relevant test cases.
+            5th Euratom Framework Programme ECORA project, pp. 91–116.
+
+        The current implementation is based on:
+            Fan, W. & Anglart, H. (2019).
+            Progress in Phenomenological Modeling of Turbulence Damping
+            around a Two-Phase Interface.
+            Fluids, 4(3), 136.
     \endverbatim
 
 
@@ -127,14 +132,14 @@ public:
 
         // Evaluate
 
-            //- Add explicit contribution to incompressible momentum equation
+            //- Add turbulence damping to strict incompressible omega equation
             virtual void addSup
             (
                 fvMatrix<scalar>& eqn,
                 const label fieldi
             );
 
-            //- Add explicit contribution to compressible momentum equation
+            //- Add turbulence damping to full-form omega equation
             virtual void addSup
             (
                 const volScalarField& rho,
