@@ -42,4 +42,15 @@ wmake
 cd ..
 
 
+#compile varRhoInterPhaseChangeFoam family
+cd varRhoInterPhaseChangeFoam
 
+# phaseChangeTwoPhaseMixtures
+cd phaseChangeTwoPhaseMixtures
+wmake
+cd ..
+
+# varRhoInterPhaseChangeFoam
+wmake
+
+cd ..

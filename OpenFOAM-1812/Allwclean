@@ -1,12 +1,12 @@
 #!/bin/bash
-# compile varRhoIncompressible class
+# clean varRhoIncompressible class
 cd varRhoIncompressible
 
 wclean
 
 cd ..
 
-#compile varRhoInterIsoFoam
+#clean varRhoInterIsoFoam
 
 cd varRhoInterIsoFoam
 
@@ -14,7 +14,7 @@ wclean
 
 cd ..
 
-#compile varRhoInterFoam family
+#clean varRhoInterFoam family
 
 #varRhoInterFoam
 cd varRhoInterFoam
@@ -37,7 +37,7 @@ cd ..
 
 cd ..
 
-#compile varRhoMultiphaseInterFoam family
+#clean varRhoMultiphaseInterFoam family
 
 cd varRhoMultiphaseInterFoam
 
@@ -56,4 +56,20 @@ wclean
 cd ..
 
 
+#clean varRhoInterPhaseChangeFoam family
+cd varRhoInterPhaseChangeFoam
 
+# phaseChangeTwoPhaseMixtures
+cd phaseChangeTwoPhaseMixtures
+wclean
+cd ..
+
+# varRhoInterPhaseChangeDyMFoam
+cd varRhoInterPhaseChangeDyMFoam
+wclean
+cd ..
+
+# varRhoInterPhaseChangeFoam
+wclean
+
+cd ..

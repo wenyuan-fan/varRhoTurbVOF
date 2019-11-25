@@ -40,5 +40,18 @@ wclean
 
 cd ..
 
+#clean varRhoInterPhaseChangeFoam family
+cd varRhoInterPhaseChangeFoam
+
+# phaseChangeTwoPhaseMixtures
+cd phaseChangeTwoPhaseMixtures
+wclean
+cd ..
+
+# varRhoInterPhaseChangeFoam
+wclean
+
+cd ..
+
 
 
