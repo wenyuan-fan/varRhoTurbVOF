@@ -64,11 +64,11 @@ volScalarField::Internal Foam::fv::turbulenceDamping::calculateSource
     const dictionary& phase1_ = transportProperties.subDict(phase1Name_);
     const dictionary& phase2_ = transportProperties.subDict(phase2Name_);
 
-    const dimensionedScalar& rho1_ = phase1_.lookup("rho");
-    const dimensionedScalar& rho2_ = phase2_.lookup("rho");
+    const dimensionedScalar rho1_("rho", dimDensity, phase1_);
+    const dimensionedScalar rho2_("rho", dimDensity, phase2_);
 
-    const dimensionedScalar& nu1_ = phase1_.lookup("nu");
-    const dimensionedScalar& nu2_ = phase2_.lookup("nu");
+    const dimensionedScalar nu1_("nu", dimViscosity, phase1_);
+    const dimensionedScalar nu2_("nu", dimViscosity, phase2_);
 
 
     const volScalarField& Alpha =
