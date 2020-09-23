@@ -22,7 +22,7 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    interPhaseChangeFoam
+    varRhoInterPhaseChangeFoam
 
 Description
     Solver for 2 incompressible, isothermal immiscible fluids with phase-change
@@ -38,6 +38,14 @@ Description
     framework.
 
     Turbulence modelling is generic, i.e. laminar, RAS or LES may be selected.
+    Variable-density effect is considered by using varRhoIncompressible
+    turbulence models, as described in:
+    \verbatim
+        Fan, W. & Anglart, H. (2020).
+        varRhoTurbVOF: A new set of volume of fluid solvers for turbulent 
+        isothermal multiphase flows in OpenFOAM.
+        Computer Physics Communications, 247, 106876
+    \endverbatim
 
 \*---------------------------------------------------------------------------*/
 

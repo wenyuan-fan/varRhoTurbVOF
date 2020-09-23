@@ -1,3 +1,0 @@
-buoyancyModification.C
-
-LIB = $(FOAM_USER_LIBBIN)/libbuoyancyModification

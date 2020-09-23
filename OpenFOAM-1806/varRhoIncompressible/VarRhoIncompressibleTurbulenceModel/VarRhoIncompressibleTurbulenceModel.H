@@ -29,11 +29,10 @@ Description
     turbulence models. Density is explicity referenced to consider the 
     isothermal variable-density effect, as described in:
     \verbatim
-        Fan, W. & Anglart, H. (2019).
+        Fan, W. & Anglart, H. (2020).
         varRhoTurbVOF: A new set of volume of fluid solvers for turbulent 
         isothermal multiphase flows in OpenFOAM.
-        Computer Physics Communications,
-        doi 10.1016/j.cpc.2019.106876
+        Computer Physics Communications, 247, 106876
     \endverbatim
 
 SourceFiles
